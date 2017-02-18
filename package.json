@@ -1,0 +1,18 @@
+{
+  "name": "design-system-experiments",
+  "version": "0.1.0",
+  "description": "design experiments using p5.js",
+  "main": "index.html",
+  "author": "daiyi <daiyitastic@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.1.8",
+    "node-sass": "^4.5.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
