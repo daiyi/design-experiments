@@ -1,0 +1,15 @@
+body {
+  padding: 0;
+  margin: 0; }
+
+.pure-g {
+  letter-spacing: normal; }
+  .pure-g .box {
+    margin: 20px; }
+
+textarea {
+  width: 100%;
+  font-size: 11px; }
+
+canvas + textarea {
+  margin-top: 10px; }
