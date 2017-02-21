@@ -5,6 +5,48 @@ let HEIGHT;
 
 const DEMOS = {
 
+  // "Tall"
+  adjective_1: (canvas) => {
+    let node;
+    let x = 200, y = 91, xSize = 30, ySize = 191;
+
+    canvas.setup = () => {
+      node = canvas.createCanvas(WIDTH, HEIGHT);
+      canvas.rectMode(canvas.CENTER);
+      canvas.fill(0);
+    }
+    canvas.draw = () => {
+      node.background('#ccc');
+      canvas.rect(x, y, xSize, ySize);
+    }
+
+    canvas.windowResized = () => {
+      canvas.resizeCanvas(WIDTH, HEIGHT);
+    }
+  },
+
+  // "nervous"
+  adjective_2: (canvas) => {
+    let node;
+    let x = 270, y = 170, xSize = 30, ySize = 35;
+
+    canvas.setup = () => {
+      node = canvas.createCanvas(WIDTH, HEIGHT);
+      canvas.rectMode(canvas.CENTER);
+      canvas.fill(0);
+    }
+    canvas.draw = () => {
+      node.background('#ccc');
+      canvas.translate(x, y);
+      canvas.rotate(-Math.PI/8);
+      canvas.rect(0, 0, xSize, ySize);
+    }
+
+    canvas.windowResized = () => {
+      canvas.resizeCanvas(WIDTH, HEIGHT);
+    }
+  },
+
   shape_drag: (canvas) => {
     let node;
     let size = 30;
@@ -50,7 +92,8 @@ const DEMOS = {
       }
 
       drawRect(x, y, size);
-      textarea.innerHTML = `rect(${x}, ${y}, ${size}, ${size});`;
+      // textarea.innerHTML = `rect(${x}, ${y}, ${size}, ${size});`;
+      textarea.innerHTML = `x = ${x}, y = ${y}, size = ${size};`;
     }
 
     canvas.windowResized = () => {
